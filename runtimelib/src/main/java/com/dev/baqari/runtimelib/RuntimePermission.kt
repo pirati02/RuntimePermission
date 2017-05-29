@@ -70,8 +70,8 @@ class RuntimePermission {
 
     companion object {
         private var requestCode = 0
-        private val runtimePermissions = RuntimePermissions()
-        private val runtimePermission = RuntimePermission()
+        private val runtimePermissions: RuntimePermissions by lazy { RuntimePermissions() }
+        private val runtimePermission: RuntimePermission by lazy { RuntimePermission() }
         private val grantedPermissions = ArrayList<String>()
         private val deniedPermissions = ArrayList<String>()
         private var counter = 0
